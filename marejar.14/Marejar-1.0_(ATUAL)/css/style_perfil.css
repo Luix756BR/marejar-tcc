@@ -1,0 +1,26 @@
+/* Ajustes específicos para manter o padrão visual do template Marejar */
+body {
+    background-color: #f8f9fa;
+    padding-top: 90px; /* Espaço para o header fixo */
+}
+
+.profile-main-container {
+    min-height: calc(100vh - 90px);
+    display: flex;
+    align-items: center;
+}
+
+.profile-avatar-lg {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #13357B;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    flex-shrink: 0;
+}

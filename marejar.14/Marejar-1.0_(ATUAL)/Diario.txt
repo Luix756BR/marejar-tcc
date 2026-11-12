@@ -1,0 +1,4 @@
+DIARIO DO PROJETO:
+    [data - nome - {ação feita} ] <- estrutura a ser seguido nos diarios;
+
+09/09/2026 - Luiz - {retirei as divs de ação no carrosel do index e apaguei tudo relacionado a sertão e agreste}.

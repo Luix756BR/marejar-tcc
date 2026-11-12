@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Marejar - Turismo</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+
+     
+
+
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <style>
+            /* Logo Marejar: branca no topo e azul quando o cabeçalho fica branco ao rolar */
+            .navbar-light:not(.sticky-top) .navbar-brand img {
+                filter: brightness(0) invert(1);
+                transition: filter .3s ease;
+            }
+            .navbar-light.sticky-top .navbar-brand img {
+                filter: none;
+            }
+
+            /* Padronização de imagens da seção Litoral Pernambucano */
+            .national-item {
+                position: relative;
+                overflow: hidden;
+                border-radius: 8px;
+            }
+            .national-item img {
+                height: 260px;
+                object-fit: cover;
+                width: 100%;
+            }
+
+            /* Padronização de imagens nos Carrosséis de Pacotes */
+            .packages-img {
+                height: 240px;
+                position: relative;
+                overflow: hidden;
+            }
+            .packages-img img {
+                height: 100%;
+                object-fit: cover;
+                width: 100%;
+            }
+
+            /* Preço dos pacotes alinhado lado a lado */
+            .packages-price {
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                gap: 4px !important;
+                white-space: nowrap !important;
+            }
+
+            /* Padronização dos cards da Galeria de Roteiros */
+            .gallery-item {
+                height: 220px;
+                position: relative;
+                overflow: hidden;
+            }
+            .gallery-item img {
+                height: 100%;
+                object-fit: cover;
+                width: 100%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <!-- Spinner Start -->
+            <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+                <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                    <span class="sr-only">Carregando...</span>
+                </div>
+            </div>
+            <!-- Spinner End -->
+
+            <!-- Navbar & Hero Start -->
+            <div class="container-fluid position-relative p-0">
+                <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                    <a href="index.html" class="navbar-brand p-0 d-flex align-items-center">
+                        <img src="img/Logo.png" alt="Logo Marejar" style="width: 70px; height: 100px; object-fit: contain; flex-shrink: 0;" class="me-2">
+                        <h1 class="m-0">Marejar</h1>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav ms-auto py-0">
+                            <a href="index.html" class="nav-item nav-link active">Início</a>
+                            <a href="index.html#sobre" class="nav-item nav-link">Sobre</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Serviços</a>
+                                <div class="dropdown-menu m-0">
+                                    <a href="IA - MIA.html" class="dropdown-item">Assistente de IA</a>
+                                    <a href="pacotes.html" class="dropdown-item">Pacotes</a>
+                                </div>
+                            </div>
+
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Regiões</a>
+                                <div class="dropdown-menu m-0">
+                                    <a href="Goiana-regioes.html" class="dropdown-item">Goiana</a>
+                                    <a href="Igarassu-regioes.html" class="dropdown-item">Igarassu</a>
+                                    <a href="Itamaraca-regioes.html" class="dropdown-item">Itamaracá</a>
+                                    <a href="Itapissuma-regioes.html" class="dropdown-item">Itapissuma</a>
+                                    <a href="Olinda-regioes.html" class="dropdown-item">Olinda</a>
+                                    <a href="Paulista-regioes.html" class="dropdown-item">Paulista</a>
+                                </div>
+                            </div>
+
+                            <a href="contato.html" class="nav-item nav-link">Contato</a>
+                        </div>
+
+                        <div id="user-nav-area" class="ms-lg-4 d-flex align-items-center">
+                            <a href="painel_acesso.html" class="btn btn-outline-primary rounded px-4 py-2 text-white border-white bg-primary bg-opacity-20">Entrar</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Carousel Start -->
+                <div class="carousel-header">
+                    <div class="carousel slide" data-bs-ride="carousel" id="carouselId">
+                        <ol class="carousel-indicators">
+                            <li class="active" data-bs-slide-to="0" data-bs-target="#carouselId"></li>
+                            <li data-bs-slide-to="1" data-bs-target="#carouselId"></li>
+                            <li data-bs-slide-to="2" data-bs-target="#carouselId"></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <img alt="Vista aérea da Ilha de Coroa do Avião, em Igarassu" class="img-fluid" src="img/cidades/igarassu/ilha-coroa-aviao-igarassu-pe.webp"/>
+                                <div class="carousel-caption">
+                                    <div class="p-3" style="max-width: 900px;">
+                                        <h1 class="display-2 text-capitalize text-white mb-4">Para onde sua próxima experiência vai te levar?</h1>
+                                        <p>Descubra os cenários mais incríveis do litoral norte de Pernambuco das paisagens históricas de Igarassu às águas paradisíacas de Ilha de Itamaracá, passando pelos encantos naturais de Itapissuma e outros destinos que transformam qualquer viagem em uma memória inesquecível.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="Paisagem do Canal de Santa Cruz, em Itapissuma" class="img-fluid" src="img/cidades/itapissuma/mare.png"/>
+                                <div class="carousel-caption">
+                                    <div class="p-3" style="max-width: 900px;">
+                                        <h1 class="display-2 text-capitalize text-white mb-4">Qual experiência combina com você?</h1>
+                                        <p class="mb-5 fs-5">Viva o melhor do ecoturismo, explore praias de tirar o fôlego, descubra sabores únicos da gastronomia regional, mergulhe na história e cultura pernambucana ou aproveite momentos perfeitos de lazer, aventura e conexão com a natureza. Aqui, cada destino entrega muito mais do que uma viagem entrega experiências autênticas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="Enseada dos Golfinhos, na Ilha de Itamaracá" class="img-fluid" src="img/cidades/itamaraca/ilha-de-itamaraca-enseada-dos-golfinhos.webp"/>
+                                <div class="carousel-caption">
+                                    <div class="p-3" style="max-width: 900px;">
+                                        <h1 class="display-2 text-capitalize text-white mb-4">Planeje tudo do seu jeito com praticidade.</h1>
+                                        <p class="mb-5 fs-5">Crie roteiros personalizados com ajuda de inteligência artificial, organize seu orçamento sem complicação, encontre atrações imperdíveis e conecte-se com guias turísticos confiáveis para viver uma experiência mais segura, completa e memorável. A sua próxima viagem não precisa ser apenas planejada. Ela pode ser extraordinária.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselId" type="button">
+                            <span aria-hidden="false" class="carousel-control-prev-icon btn bg-primary"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselId" type="button">
+                            <span aria-hidden="false" class="carousel-control-next-icon btn bg-primary"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Carousel End -->
+            </div>
+        </header>
+
+        <main>
+            <!-- About Start -->
+            <div id="sobre" class="container-fluid about py-5">
+                <div class="container py-5">
+                    <div class="row g-5 align-items-center">
+                        <div class="col-lg-5">
+                            <div class="h-100" style="border: none;">
+                                <img src="img/about-img.jpg" class="img-fluid w-100 h-100" alt="Sobre a Marejar">
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <h5 class="section-about-title pe-3">Quem somos nós?</h5>
+                            <h1 class="mb-4">Bem-vindo(a) à <span class="text-primary">Marejar</span></h1>
+                            <p class="mb-4">A Marejar nasceu com o propósito de transformar a forma como as pessoas planejam e vivenciam suas viagens. Somos uma plataforma de turismo inteligente que conecta viajantes a informações confiáveis, experiências personalizadas e profissionais qualificados em um só lugar, utilizando tecnologia e inteligência artificial para tornar o planejamento mais prático, seguro e eficiente.</p>
+                            <p class="mb-4">Nossa plataforma auxilia na criação de roteiros, organização financeira, definição de rotas e descoberta de destinos culturais, ecológicos e de lazer de forma personalizada. Além disso, centralizamos informações sobre hospedagem, alimentação, atrações turísticas e serviços locais, facilitando o acesso a dados confiáveis e reduzindo a dificuldade de pesquisar em diferentes plataformas.</p>
+                            <p class="mb-4">A Marejar também valoriza o turismo sustentável e experiências autênticas, incentivando a descoberta de lugares pouco explorados e conectando turistas a guias especializados. Mais do que uma plataforma, queremos construir uma nova maneira de explorar o mundo: mais inteligente, organizada, acessível e conectada.</p>
+                            <div class="row gy-2 gx-4 mb-4">
+                                <div class="col-sm-6">
+                                    <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Planejamento Inteligente de Viagens</p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Hospedagens Selecionadas</p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Experiências Turísticas Personalizadas</p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Conexão com Guias Especializados</p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Descoberta de Destinos Autênticos</p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Suporte e Organização 24/7</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About End -->
+
+            <!-- Services Start -->
+            <div class="container-fluid service py-5">
+                <div class="container py-5">
+                    <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                        <h5 class="section-title px-3">Serviços</h5>
+                        <h1 class="mb-0">O que a Marejar oferece?</h1>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- Lado esquerdo -->
+                        <div class="col-lg-6">
+                            <div class="row g-4">
+                                <!-- Serviço 1 -->
+                                <div class="col-12">
+                                    <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
+                                        <div class="service-content text-end">
+                                            <h5 class="mb-4">Mapa em Tempo Real</h5>
+                                            <p class="mb-0">Acompanhe sua localização durante toda a viagem, facilitando deslocamentos, organização do roteiro e acesso rápido aos destinos planejados.</p>
+                                        </div>
+                                        <div class="service-icon p-4">
+                                            <i class="fa fa-map-marked-alt fa-4x text-primary"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Serviço 2 -->
+                                <div class="col-12">
+                                    <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
+                                        <div class="service-content text-end">
+                                            <h5 class="mb-4">Pontos Turísticos</h5>
+                                            <p class="mb-0">Descubra praias, trilhas, restaurantes, atrações culturais e locais autênticos da região de forma prática e acessível.</p>
+                                        </div>
+                                        <div class="service-icon p-4">
+                                            <i class="fa fa-map-pin fa-4x text-primary"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Serviço 3 -->
+                                <div class="col-12">
+                                    <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
+                                        <div class="service-content text-end">
+                                            <h5 class="mb-4">Roteiros Personalizados</h5>
+                                            <p class="mb-0">Crie viagens sob medida com base nos seus interesses, orçamento e preferências para viver experiências únicas.</p>
+                                        </div>
+                                        <div class="service-icon p-4">
+                                            <i class="fa fa-route fa-4x text-primary"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Lado direito -->
+                        <div class="col-lg-6">
+                            <div class="row g-4">
+                                <!-- Serviço 4 -->
+                                <div class="col-12">
+                                    <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
+                                        <div class="service-icon p-4">
+                                            <i class="fa fa-users fa-4x text-primary"></i>
+                                        </div>
+                                        <div class="service-content">
+                                            <h5 class="mb-4">Guias de Turismo</h5>
+                                            <p class="mb-0">Conecte-se diretamente com guias locais certificados e tenha experiências mais seguras, culturais e imersivas.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Serviço 5 -->
+                                <div class="col-12">
+                                    <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
+                                        <div class="service-icon p-4">
+                                            <i class="fa fa-robot fa-4x text-primary"></i>
+                                        </div>
+                                        <div class="service-content">
+                                            <h5 class="mb-4">Assistente Virtual</h5>
+                                            <p class="mb-0">Receba recomendações inteligentes de lugares, eventos, atividades e experiências conforme o seu perfil.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Serviço 6 -->
+                                <div class="col-12">
+                                    <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
+                                        <div class="service-icon p-4">
+                                            <i class="fa fa-layer-group fa-4x text-primary"></i>
+                                        </div>
+                                        <div class="service-content">
+                                            <h5 class="mb-4">Informações Centralizadas</h5>
+                                            <p class="mb-0">Tenha acesso em um só lugar a hospedagem, alimentação, transporte, eventos e serviços essenciais da viagem.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Services End -->
+
+            <!-- Explore Tour Start -->
+            <div class="container-fluid ExploreTour py-5">
+                <div class="container py-5">
+                    <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                        <h5 class="section-title px-3">Litoral Pernambucano</h5>
+                        <h1 class="mb-4">Mareja pelo Litoral Pernambucano</h1>
+                        <p class="mb-0">Conheça as cidades do litoral norte</p>
+                    </div>
+                    <div class="tab-class text-center">
+                        <div class="tab-content">
+                            <div class="tab-pane fade show p-0 active" id="NationalTab-1">
+                                <div class="row g-4">
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="national-item">
+                                            <img alt="Igarassu" class="img-fluid w-100 rounded" src="img/cidades/igarassu/ilha-coroa-aviao-igarassu-pe.webp"/>
+                                            <div class="national-content">
+                                                <div class="national-info">
+                                                    <h5 class="text-white text-uppercase mb-2">Igarassu</h5>
+                                                </div>
+                                            </div>
+                                            <div class="national-plus-icon">
+                                                <a class="my-auto" href="Igarassu-regioes.html"><i class="fas fa-link fa-2x text-white"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="national-item">
+                                            <img alt="Itapissuma" class="img-fluid w-100 rounded" src="img/cidades/itapissuma/mare.png"/>
+                                            <div class="national-content">
+                                                <div class="national-info">
+                                                    <h5 class="text-white text-uppercase mb-2">Itapissuma</h5>
+                                                </div>
+                                            </div>
+                                            <div class="national-plus-icon">
+                                                <a class="my-auto" href="Itapissuma-regioes.html"><i class="fas fa-link fa-2x text-white"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="national-item">
+                                            <img alt="Itamaracá" class="img-fluid w-100 rounded" src="img/cidades/itamaraca/ilha-de-itamaraca-praia-forno-da-cal.webp"/>
+                                            <div class="national-content">
+                                                <div class="national-info">
+                                                    <h5 class="text-white text-uppercase mb-2">Itamaracá</h5>
+                                                </div>
+                                            </div>
+                                            <div class="national-plus-icon">
+                                                <a class="my-auto" href="Itamaraca-regioes.html"><i class="fas fa-link fa-2x text-white"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="national-item">
+                                            <img alt="Goiana" class="img-fluid w-100 rounded" src="img/cidades/goiana/praia de catuama (1).jpg"/>
+                                            <div class="national-content">
+                                                <div class="national-info">
+                                                    <h5 class="text-white text-uppercase mb-2">Goiana</h5>
+                                                </div>
+                                            </div>
+                                            <div class="national-plus-icon">
+                                                <a class="my-auto" href="Goiana-regioes.html"><i class="fas fa-link fa-2x text-white"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="national-item">
+                                            <img alt="Olinda" class="img-fluid w-100 rounded" src="img/cidades/olinda/igreja-do-carmo.jpg"/>
+                                            <div class="national-content">
+                                                <div class="national-info">
+                                                    <h5 class="text-white text-uppercase mb-2">Olinda</h5>
+                                                </div>
+                                            </div>
+                                            <div class="national-plus-icon">
+                                                <a class="my-auto" href="Olinda-regioes.html"><i class="fas fa-link fa-2x text-white"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="national-item">
+                                            <img alt="Paulista" class="img-fluid w-100 rounded" src="img/cidades/paulista/paulista-praia-maria-farinha.webp"/>
+                                            <div class="national-content">
+                                                <div class="national-info">
+                                                    <h5 class="text-white text-uppercase mb-2">Paulista</h5>
+                                                </div>
+                                            </div>
+                                            <div class="national-plus-icon">
+                                                <a class="my-auto" href="Paulista-regioes.html"><i class="fas fa-link fa-2x text-white"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Explore Tour End -->
+
+            <!-- Inicio Pacotes -->
+            <div class="container-fluid packages py-5">
+                <div class="container py-5">
+                    <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                        <h5 class="section-title px-3">Pacotes Turísticos</h5>
+                        <h1 class="mb-0">Nossos principais Pacotes Turísticos</h1>
+                    </div>
+                    <div class="packages-carousel owl-carousel">
+                        <!-- Pacote 1 -->
+                        <div class="packages-item">
+                            <div class="packages-img">
+                                <img alt="Itapissuma" class="img-fluid w-100 rounded-top" src="img/cidades/itapissuma/mare.png"/>
+                                <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
+                                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt me-2"></i>Pernambuco</small>
+                                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i>3 dias</small>
+                                    <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>2 Pessoas</small>
+                                </div>
+                                <div class="packages-price py-2 px-4">R$ 349,00</div>
+                            </div>
+                            <div class="packages-content bg-light">
+                                <div class="p-4 pb-0">
+                                    <h5 class="mb-0">Itapissuma</h5>
+                                    <small class="text-uppercase">Itapissuma - Pernambuco</small>
+                                    <div class="mb-3">
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                    </div>
+                                    <p class="mb-4">Conhecida como a Terra da Caldeirada, Itapissuma encanta com suas belezas naturais às margens do Canal de Santa Cruz. Explore passeios de barco exclusivos, manguezais preservados e a autêntica culinária ribeirinha da região.</p>
+                                </div>
+                                <div class="row bg-primary rounded-bottom mx-0">
+                                    <div class="col-12 text-center px-0">
+                                        <a class="btn-hover btn text-white py-2 px-4" href="pacotes.html">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pacote 2 -->
+                        <div class="packages-item">
+                            <div class="packages-img">
+                                <img alt="Alto da Sé" class="img-fluid w-100 rounded-top" src="img/cidades/olinda/alto-da-se-olinda~2.jpg"/>
+                                <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
+                                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt me-2"></i>Pernambuco</small>
+                                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i>3 dias</small>
+                                    <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>2 Pessoas</small>
+                                </div>
+                                <div class="packages-price py-2 px-4">R$ 449,00</div>
+                            </div>
+                            <div class="packages-content bg-light">
+                                <div class="p-4 pb-0">
+                                    <h5 class="mb-0">Alto da Sé</h5>
+                                    <small class="text-uppercase">Olinda - Pernambuco</small>
+                                    <div class="mb-3">
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                    </div>
+                                    <p class="mb-4">Visite o coração histórico de Olinda, famoso por suas ladeiras charmosas, igrejas seculares e vista panorâmica imperdível. Saboreie as tradicionais tapiocas do Alto da Sé enquanto aprecia a rica cultura e o artesanato local pernambucano.</p>
+                                </div>
+                                <div class="row bg-primary rounded-bottom mx-0">
+                                    <div class="col-12 text-center px-0">
+                                        <a class="btn-hover btn text-white py-2 px-4" href="pacotes.html">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pacote 3 -->
+                        <div class="packages-item">
+                            <div class="packages-img">
+                                <img alt="Ilha de Itamaracá" class="img-fluid w-100 rounded-top" src="img/cidades/itamaraca/pontal-itamaraca-pernambuco.webp"/>
+                                <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
+                                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt me-2"></i>Pernambuco</small>
+                                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i>3 dias</small>
+                                    <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>2 Pessoas</small>
+                                </div>
+                                <div class="packages-price py-2 px-4">R$ 549,00</div>
+                            </div>
+                            <div class="packages-content bg-light">
+                                <div class="p-4 pb-0">
+                                    <h5 class="mb-0">Ilha de Itamaracá</h5>
+                                    <small class="text-uppercase">Itamaracá - Pernambuco</small>
+                                    <div class="mb-3">
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                    </div>
+                                    <p class="mb-4">Descubra praias paradisíacas de águas mornas, o histórico Forte Orange e passeios inesquecíveis de barco até a Ilha de Coroa do Avião. Um destino perfeito que une ecoturismo, tranquilidade e muita história colonial.</p>
+                                </div>
+                                <div class="row bg-primary rounded-bottom mx-0">
+                                    <div class="col-12 text-center px-0">
+                                        <a class="btn-hover btn text-white py-2 px-4" href="pacotes.html">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pacote 4 -->
+                        <div class="packages-item">
+                            <div class="packages-img">
+                                <img alt="Praia do Janga" class="img-fluid w-100 rounded-top" src="img/cidades/paulista/paulista-praia-janga.jpg"/>
+                                <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
+                                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt me-2"></i>Pernambuco</small>
+                                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i>3 dias</small>
+                                    <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>2 Pessoas</small>
+                                </div>
+                                <div class="packages-price py-2 px-4">R$ 649,00</div>
+                            </div>
+                            <div class="packages-content bg-light">
+                                <div class="p-4 pb-0">
+                                    <h5 class="mb-0">Praia do Janga</h5>
+                                    <small class="text-uppercase">Paulista - Pernambuco</small>
+                                    <div class="mb-3">
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                    </div>
+                                    <p class="mb-4">Relaxe nas extensas faixas de areia e mar calmo da Praia do Janga, situada no litoral norte de Paulista. Uma excelente opção para curtir banhos revigorantes em família e aproveitar a proximidade com ótimas opções gastronômicas.</p>
+                                </div>
+                                <div class="row bg-primary rounded-bottom mx-0">
+                                    <div class="col-12 text-center px-0">
+                                        <a class="btn-hover btn text-white py-2 px-4" href="pacotes.html">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Packages End -->
+
+            <!-- Gallery Start -->
+            <div class="container-fluid gallery py-5 my-5">
+                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                    <h5 class="section-title px-3">Roteiros Turísticos</h5>
+                    <h1 class="mb-4">Nossos Principais Tipos de Turismo</h1>
+                </div>
+
+                <div class="tab-class text-center">
+                    <!-- Categorias -->
+                    <ul class="nav nav-pills d-inline-flex justify-content-center mb-5">
+                        <li class="nav-item">
+                            <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill active" data-bs-toggle="pill" href="#GalleryTab-1">
+                                <span class="text-dark" style="width: 190px;">Turismo de Experiência</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex py-2 mx-3 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#GalleryTab-2">
+                                <span class="text-dark" style="width: 190px;">Turismo Educacional</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#GalleryTab-3">
+                                <span class="text-dark" style="width: 190px;">Turismo Religioso</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#GalleryTab-4">
+                                <span class="text-dark" style="width: 190px;">Turismo de Lazer</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <!-- TURISMO DE EXPERIÊNCIA -->
+                        <div id="GalleryTab-1" class="tab-pane fade show p-0 active">
+                            <div class="row g-2">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="gallery-item h-100">
+                                        <img src="img/cidades/goiana/barra de catuama.jpg" class="img-fluid w-100 h-100 rounded" alt="Barra de Catuama">
+                                        <div class="gallery-content">
+                                            <div class="gallery-info">
+                                                <h5 class="text-white text-uppercase mb-2">Barra de Catuama</h5>
+                                                <a href="pacotes.html" class="btn-hover text-white">Explorar destino <i class="fa fa-arrow-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-plus-icon">
+                                            <a href="img/cidades/goiana/barra de catuama.jpg" data-lightbox="experiencia" class="my-auto">
+                                                <i class="fas fa-plus fa-2x text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="gallery-item h-100">
+                                        <img src="img/cidades/goiana/croa da baleia.jpg" class="img-fluid w-100 h-100 rounded" alt="Croa da Baleia">
+                                        <div class="gallery-content">
+                                            <div class="gallery-info">
+                                                <h5 class="text-white text-uppercase mb-2">Croa da Baleia</h5>
+                                                <a href="pacotes.html" class="btn-hover text-white">Explorar destino <i class="fa fa-arrow-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-plus-icon">
+                                            <a href="img/cidades/goiana/croa da baleia.jpg" data-lightbox="experiencia" class="my-auto">
+                                                <i class="fas fa-plus fa-2x text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="gallery-item h-100">
+                                        <img src="img/cidades/itamaraca/ilha-de-itamaraca-enseada-dos-golfinhos.webp" class="img-fluid w-100 h-100 rounded" alt="Enseada dos Golfinhos">
+                                        <div class="gallery-content">
+                                            <div class="gallery-info">
+                                                <h5 class="text-white text-uppercase mb-2">Enseada dos Golfinhos</h5>
+                                                <a href="pacotes.html" class="btn-hover text-white">Explorar destino <i class="fa fa-arrow-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-plus-icon">
+                                            <a href="img/cidades/itamaraca/ilha-de-itamaraca-enseada-dos-golfinhos.webp" data-lightbox="experiencia" class="my-auto">
+                                                <i class="fas fa-plus fa-2x text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="gallery-item h-100">
+                                        <img src="img/cidades/itapissuma/canalsantacruz.jpg" class="img-fluid w-100 h-100 rounded" alt="Canal de Santa Cruz">
+                                        <div class="gallery-content">
+                                            <div class="gallery-info">
+                                                <h5 class="text-white text-uppercase mb-2">Canal de Santa Cruz</h5>
+                                                <a href="pacotes.html" class="btn-hover text-white">Explorar destino <i class="fa fa-arrow-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-plus-icon">
+                                            <a href="img/cidades/itapissuma/canalsantacruz.jpg" data-lightbox="experiencia" class="my-auto">
+                                                <i class="fas fa-plus fa-2x text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="gallery-item h-100">
+                                        <img src="img/cidades/paulista/rio-timbo-paulista-pe.webp" class="img-fluid w-100 h-100 rounded" alt="Rio Timbó">
+                                        <div class="gallery-content">
+                                            <div class="gallery-info">
+                                                <h5 class="text-white text-uppercase mb-2">Rio Timbó</h5>
+                                                <a href="pacotes.html" class="btn-hover text-white">Explorar destino <i class="fa fa-arrow-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-plus-icon">
+                                            <a href="img/cidades/paulista/rio-timbo-paulista-pe.webp" data-lightbox="experiencia" class="my-auto">
+                                                <i class="fas fa-plus fa-2x text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="gallery-item h-100">
+                                        <img src="img/cidades/itamaraca/pontal-itamaraca-pernambuco.webp" class="img-fluid w-100 h-100 rounded" alt="Pontal de Itamaracá">
+                                        <div class="gallery-content">
+                                            <div class="gallery-info">
+                                                <h5 class="text-white text-uppercase mb-2">Pontal de Itamaracá</h5>
+                                                <a href="pacotes.html" class="btn-hover text-white">Explorar destino <i class="fa fa-arrow-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-plus-icon">
+                                            <a href="img/cidades/itamaraca/pontal-itamaraca-pernambuco.webp" data-lightbox="experiencia" class="my-auto">
+                                                <i class="fas fa-plus fa-2x text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TURISMO EDUCACIONAL -->
+                        <div id="GalleryTab-2" class="tab-pane fade p-0">
+                            <div class="row g-2">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="gallery-item h-100">
+                                        <img src="img/cidades/igarassu/biblioteca.jpg" class="img-fluid w-100 h-100 rounded" alt="Biblioteca de Igarassu">
+                                        <div class="gallery-content">
+                                            <div class="gallery-info">
+                                                <h5 class="text-white text-uppercase mb-2">Biblioteca</h5>
+                                                <a href="pacotes.html" class="btn-hover text-white">Conhecer espaço <i class="fa fa-arrow-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-plus-icon">
+                                            <a href="img/cidades/igarassu/biblioteca.jpg" data-lightbox="educacional" class="my-auto">
+                                                <i class="fas fa-plus fa-2x text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="gallery-item h-100">
+                                        <img src="img/cidades/igarassu/museu.webp" class="img-fluid w-100 h-100 rounded" alt="Museu de Igarassu">
+                                        <div class="gallery-content">
+                                            <div class="gallery-info">
+                                                <h5 class="text-white text-uppercase mb-2">Museu de Igarassu</h5>
+                                                <a href="pacotes.html" class="btn-hover text-white">Conhecer espaço <i class="fa fa-arrow-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-plus-icon">
+                                            <a href="img/cidades/igarassu/museu.webp" data-lightbox="educacional" class="my-auto">
+                                                <i class="fas fa-plus fa-2x text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="gallery-item h-100">
+                                        <img src="img/cidades/goiana/centro historico goiana.jpeg" class="img-fluid w-100 h-100 rounded" alt="Centro Histórico de Goiana">
+                                        <div class="gallery-content">
+                                            <div class="gallery-info">
+                                                <h5 class="text-white text-uppercase mb-2">Centro Histórico de Goiana</h5>
+                                                <a href="pacotes.html" class="btn-hover text-white">Conhecer história <i class="fa fa-arrow-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-plus-icon">
+                                            <a href="img/cidades/goiana/centro historico goiana.jpeg" data-lightbox="educacional" class="my-auto">
+                                                <i class="fas fa-plus fa-2x text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="gallery-item h-100">
+                                        <img src="img/cidades/igarassu/museu1.jpeg" class="img-fluid w-100 h-100 rounded" alt="Cultura e Memória">
+                                        <div class="gallery-content">
+                                            <div class="gallery-info">
+                                                <h5 class="text-white text-uppercase mb-2">Cultura e Memória</h5>
+                                                <a href="pacotes.html" class="btn-hover text-white">Conhecer espaço <i class="fa fa-arrow-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-plus-icon">
+                                            <a href="img/cidades/igarassu/museu1.jpeg" data-lightbox="educacional" class="my-auto">
+                                                <i class="fas fa-plus fa-2x text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="gallery-item h-100">
+                                        <img src="img/cidades/igarassu/museupinacotecajpeg" class="img-fluid w-100 h-100 rounded" alt="Pinacoteca de Igarassu">
+                                        <div class="gallery-content">
+                                            <div class="gallery-info">
+                                                <h5 class="text-white text-uppercase mb-2">Pinacoteca</h5>
+                                                <a href="pacotes.html" class="btn-hover text-white">Conhecer espaço <i class="fa fa-arrow-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-plus-icon">
+                                            <a href="img/cidades/igarassu/museupinacotecajpeg" data-lightbox="educacional" class="my-auto">
+                                                <i class="fas fa-plus fa-2x text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="gallery-item h-100">
+                                        <img src="img/cidades/igarassu/monumento.jpeg" class="img-fluid w-100 h-100 rounded" alt="Monumento Histórico">
+                                        <div class="gallery-content">
+                                            <div class="gallery-info">
+                                                <h5 class="text-white text-uppercase mb-2">Monumento Histórico</h5>
+                                                <a href="pacotes.html" class="btn-hover text-white">Conhecer história <i class="fa fa-arrow-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-plus-icon">
+                                            <a href="img/cidades/igarassu/monumento.jpeg" data-lightbox="educacional" class="my-auto">
+                                                <i class="fas fa-plus fa-2x text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TURISMO RELIGIOSO -->
+                        <div id="GalleryTab-3" class="tab-pane fade p-0">
+                            <div class="row g-2">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="gallery-item h-100">
+                                        <img src="img/cidades/olinda/mosteiro-sao-bento-olinda-pe.webp" class="img-fluid w-100 h-100 rounded" alt="Mosteiro de São Bento">
+                                        <div class="gallery-content">
+                                            <div class="gallery-info">
+                                                <h5 class="text-white text-uppercase mb-2">Mosteiro de São Bento</h5>
+                                                <a href="pacotes.html" class="btn-hover text-white">Conhecer local <i class="fa fa-arrow-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-plus-icon">
+                                            <a href="img/cidades/olinda/mosteiro-sao-bento-olinda-pe.webp" data-lightbox="religioso" class="my-auto">
+                                                <i class="fas fa-plus fa-2x text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="gallery-item h-100">
+                                        <img src="img/cidades/olinda/igreja-do-carmo.jpg" class="img-fluid w-100 h-100 rounded" alt="Igreja do Carmo">
+                                        <div class="gallery-content">
+                                            <div class="gallery-info">
+                                                <h5 class="text-white text-uppercase mb-2">Igreja do Carmo</h5>
+                                                <a href="pacotes.html" class="btn-hover text-white">Conhecer local <i class="fa fa-arrow-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-plus-icon">
+                                            <a href="img/cidades/olinda/igreja-do-carmo.jpg" data-lightbox="religioso" class="my-auto">
+                                                <i class="fas fa-plus fa-2x text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="gallery-item h-100">
+                                        <img src="img/cidades/igarassu/convento.jpg" class="img-fluid w-100 h-100 rounded" alt="Convento de Igarassu">
+                                        <div class="gallery-content">
+                                            <div class="gallery-info">
+                                                <h5 class="text-white text-uppercase mb-2">Convento de Igarassu</h5>
+                                                <a href="pacotes.html" class="btn-hover text-white">Conhecer local <i class="fa fa-arrow-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-plus-icon">
+                                            <a href="img/cidades/igarassu/convento.jpg" data-lightbox="religioso" class="my-auto">
+                                                <i class="fas fa-plus fa-2x text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="gallery-item h-100">
+                                        <img src="img/cidades/paulista/igreja-conceicao-paulista-pe.webp" class="img-fluid w-100 h-100 rounded" alt="Igreja da Conceição">
+                                        <div class="gallery-content">
+                                            <div class="gallery-info">
+                                                <h5 class="text-white text-uppercase mb-2">Igreja da Conceição</h5>
+                                                <a href="pacotes.html" class="btn-hover text-white">Conhecer local <i class="fa fa-arrow-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-plus-icon">
+                                            <a href="img/cidades/paulista/igreja-conceicao-paulista-pe.webp" data-lightbox="religioso" class="my-auto">
+                                                <i class="fas fa-plus fa-2x text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="gallery-item h-100">
+                                        <img src="img/cidades/igarassu/matriz.jpg" class="img-fluid w-100 h-100 rounded" alt="Matriz de Igarassu">
+                                        <div class="gallery-content">
+                                            <div class="gallery-info">
+                                                <h5 class="text-white text-uppercase mb-2">Matriz de Igarassu</h5>
+                                                <a href="pacotes.html" class="btn-hover text-white">Conhecer local <i class="fa fa-arrow-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-plus-icon">
+                                            <a href="img/cidades/igarassu/matriz.jpg" data-lightbox="religioso" class="my-auto">
+                                                <i class="fas fa-plus fa-2x text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="gallery-item h-100">
+                                        <img src="img/cidades/paulista/igreja-matriz-santa-izabel-paulista-pe.webp" class="img-fluid w-100 h-100 rounded" alt="Matriz de Santa Isabel">
+                                        <div class="gallery-content">
+                                            <div class="gallery-info">
+                                                <h5 class="text-white text-uppercase mb-2">Matriz de Santa Isabel</h5>
+                                                <a href="pacotes.html" class="btn-hover text-white">Conhecer local <i class="fa fa-arrow-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-plus-icon">
+                                            <a href="img/cidades/paulista/igreja-matriz-santa-izabel-paulista-pe.webp" data-lightbox="religioso" class="my-auto">
+                                                <i class="fas fa-plus fa-2x text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TURISMO DE LAZER -->
+                        <div id="GalleryTab-4" class="tab-pane fade p-0">
+                            <div class="row g-2">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="gallery-item h-100">
+                                        <img src="img/cidades/paulista/veneza-water-park-paulista-pe.webp" class="img-fluid w-100 h-100 rounded" alt="Veneza Water Park">
+                                        <div class="gallery-content">
+                                            <div class="gallery-info">
+                                                <h5 class="text-white text-uppercase mb-2">Veneza Water Park</h5>
+                                                <a href="pacotes.html" class="btn-hover text-white">Explorar lazer <i class="fa fa-arrow-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-plus-icon">
+                                            <a href="img/cidades/paulista/veneza-water-park-paulista-pe.webp" data-lightbox="lazer" class="my-auto">
+                                                <i class="fas fa-plus fa-2x text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="gallery-item h-100">
+                                        <img src="img/cidades/itamaraca/ilha-de-itamaraca-praia-pilar.webp" class="img-fluid w-100 h-100 rounded" alt="Praia do Pilar">
+                                        <div class="gallery-content">
+                                            <div class="gallery-info">
+                                                <h5 class="text-white text-uppercase mb-2">Praia do Pilar</h5>
+                                                <a href="pacotes.html" class="btn-hover text-white">Explorar lazer <i class="fa fa-arrow-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-plus-icon">
+                                            <a href="img/cidades/itamaraca/ilha-de-itamaraca-praia-pilar.webp" data-lightbox="lazer" class="my-auto">
+                                                <i class="fas fa-plus fa-2x text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="gallery-item h-100">
+                                        <img src="img/cidades/goiana/carne de vaca.jpg" class="img-fluid w-100 h-100 rounded" alt="Praia de Carne de Vaca">
+                                        <div class="gallery-content">
+                                            <div class="gallery-info">
+                                                <h5 class="text-white text-uppercase mb-2">Carne de Vaca</h5>
+                                                <a href="pacotes.html" class="btn-hover text-white">Explorar lazer <i class="fa fa-arrow-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-plus-icon">
+                                            <a href="img/cidades/goiana/carne de vaca.jpg" data-lightbox="lazer" class="my-auto">
+                                                <i class="fas fa-plus fa-2x text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="gallery-item h-100">
+                                        <img src="img/cidades/itamaraca/ilha-de-itamaraca-praia-sossego.webp" class="img-fluid w-100 h-100 rounded" alt="Praia do Sossego">
+                                        <div class="gallery-content">
+                                            <div class="gallery-info">
+                                                <h5 class="text-white text-uppercase mb-2">Praia do Sossego</h5>
+                                                <a href="pacotes.html" class="btn-hover text-white">Explorar lazer <i class="fa fa-arrow-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-plus-icon">
+                                            <a href="img/cidades/itamaraca/ilha-de-itamaraca-praia-sossego.webp" data-lightbox="lazer" class="my-auto">
+                                                <i class="fas fa-plus fa-2x text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="gallery-item h-100">
+                                        <img src="img/cidades/goiana/praia de catuama (1).jpg" class="img-fluid w-100 h-100 rounded" alt="Praia de Catuama">
+                                        <div class="gallery-content">
+                                            <div class="gallery-info">
+                                                <h5 class="text-white text-uppercase mb-2">Praia de Catuama</h5>
+                                                <a href="pacotes.html" class="btn-hover text-white">Explorar lazer <i class="fa fa-arrow-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-plus-icon">
+                                            <a href="img/cidades/goiana/praia de catuama (1).jpg" data-lightbox="lazer" class="my-auto">
+                                                <i class="fas fa-plus fa-2x text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="gallery-item h-100">
+                                        <img src="img/cidades/itamaraca/ilha-de-itamaraca-praia-forno-da-cal.webp" class="img-fluid w-100 h-100 rounded" alt="Praia do Forno da Cal">
+                                        <div class="gallery-content">
+                                            <div class="gallery-info">
+                                                <h5 class="text-white text-uppercase mb-2">Praia do Forno da Cal</h5>
+                                                <a href="pacotes.html" class="btn-hover text-white">Explorar lazer <i class="fa fa-arrow-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-plus-icon">
+                                            <a href="img/cidades/itamaraca/ilha-de-itamaraca-praia-forno-da-cal.webp" data-lightbox="lazer" class="my-auto">
+                                                <i class="fas fa-plus fa-2x text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Gallery End -->
+
+            <!-- Testimonial Start -->
+            <div class="container-fluid testimonial py-5">
+                <div class="container py-5">
+                    <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                        <h5 class="section-title px-3">Vivências dos Turistas</h5>
+                        <h1 class="mb-0">Depoimentos dos Nossos Clientes</h1>
+                        <p class="text-muted mt-2 mb-0" style="font-size: 0.85rem;">Depoimentos ilustrativos para apresentação da plataforma.</p>
+                    </div>
+                    <div class="testimonial-carousel owl-carousel">
+                        <div class="testimonial-item text-center rounded pb-4">
+                            <div class="testimonial-comment bg-light rounded p-4">
+                                <p class="text-center mb-5">O Marejar facilitou muito o planejamento do nosso passeio. Encontramos informações sobre os lugares que queríamos conhecer e conseguimos organizar melhor o nosso dia.</p>
+                            </div>
+                            <div class="testimonial-img p-1">
+                                <img alt="Mariana Oliveira" class="img-fluid rounded-circle" src="img/testimonial-1.jpg"/>
+                            </div>
+                            <div style="margin-top: -35px;">
+                                <h5 class="mb-0">Mariana Oliveira</h5>
+                                <div class="d-flex justify-content-center">
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item text-center rounded pb-4">
+                            <div class="testimonial-comment bg-light rounded p-4">
+                                <p class="text-center mb-5">Gostei de reunir várias opções de passeios em um só lugar. A plataforma é simples de usar e ajudou a descobrir destinos que eu ainda não conhecia no litoral pernambucano.</p>
+                            </div>
+                            <div class="testimonial-img p-1">
+                                <img alt="Lucas Ferreira" class="img-fluid rounded-circle" src="img/testimonial-2.jpg"/>
+                            </div>
+                            <div style="margin-top: -35px;">
+                                <h5 class="mb-0">Lucas Ferreira</h5>
+                                <div class="d-flex justify-content-center">
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item text-center rounded pb-4">
+                            <div class="testimonial-comment bg-light rounded p-4">
+                                <p class="text-center mb-5">A proposta é muito interessante para quem quer explorar a região. As informações deixam a busca mais prática e ajudam a montar um roteiro de acordo com o nosso interesse.</p>
+                            </div>
+                            <div class="testimonial-img p-1">
+                                <img alt="Ana Beatriz Santos" class="img-fluid rounded-circle" src="img/testimonial-3.jpg"/>
+                            </div>
+                            <div style="margin-top: -35px;">
+                                <h5 class="mb-0">Ana Beatriz Santos</h5>
+                                <div class="d-flex justify-content-center">
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item text-center rounded pb-4">
+                            <div class="testimonial-comment bg-light rounded p-4">
+                                <p class="text-center mb-5">Consegui visualizar melhor as possibilidades de passeio e aproveitar mais o tempo da viagem. É ótimo ter referências de diferentes cidades em uma única plataforma.</p>
+                            </div>
+                            <div class="testimonial-img p-1">
+                                <img alt="Pedro Henrique Lima" class="img-fluid rounded-circle" src="img/testimonial-4.jpg"/>
+                            </div>
+                            <div style="margin-top: -35px;">
+                                <h5 class="mb-0">Pedro Henrique Lima</h5>
+                                <div class="d-flex justify-content-center">
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial End -->
+        </main>
+
+        <!-- Footer Start -->
+        <footer class="container-fluid footer py-5 bg-dark text-white border-top border-secondary">
+            <div class="container py-4">
+                <div class="row g-5 justify-content-between">
+                    <!-- Coluna 1: Sobre a Marca -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-item d-flex flex-column">
+                            <div class="d-flex align-items-center mb-3">
+                                <img alt="Logo Marejar" class="me-2" src="img/Logo.png" style="width: 50px; height: 60px; object-fit: contain;"/>
+                                <h3 class="text-white m-0">Marejar</h3>
+                            </div>
+                            <p class="text-white-50 mb-4">Descubra. Explore. Viva o melhor do litoral norte de Pernambuco com roteiros inteligentes e personalizados.</p>
+                            <p class="text-white-50 mb-2"><i class="fas fa-graduation-cap me-2 text-primary"></i> TCC - Desenvolvimento de Sistemas</p>
+                            <p class="text-white-50 mb-4"><i class="fas fa-school me-2 text-primary"></i> ETE Jurandir Bezerra Lins</p>
+                        </div>
+                    </div>
+                    <!-- Coluna 2: Navegação Rápida -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Navegação</h4>
+                            <a class="text-white-50 mb-2 text-decoration-none" href="index.html"><i class="fas fa-angle-right me-2 text-primary"></i> Início</a>
+                            <a class="text-white-50 mb-2 text-decoration-none" href="index.html#sobre"><i class="fas fa-angle-right me-2 text-primary"></i> Sobre o Projeto</a>
+                            <a class="text-white-50 mb-2 text-decoration-none" href="pacotes.html"><i class="fas fa-angle-right me-2 text-primary"></i> Pacotes Turísticos</a>
+                            <a class="text-white-50 mb-2 text-decoration-none" href="contato.html"><i class="fas fa-angle-right me-2 text-primary"></i> Contato</a>
+                        </div>
+                    </div>
+                    <!-- Coluna 3: Regiões & Informações -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Regiões Atendidas</h4>
+                            <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Olinda</p>
+                            <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Paulista</p>
+                            <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Igarassu</p>
+                            <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Itapissuma</p>
+                            <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Itamaracá</p>
+                            <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Goiana</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer End -->
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+
+        <!-- Renderização dinâmica do perfil/login/Minha Jornada no Header -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                verificarSessaoUsuario();
+            });
+
+            function verificarSessaoUsuario() {
+                const userNavArea = document.getElementById('user-nav-area');
+                if (!userNavArea) return;
+
+                const userData = localStorage.getItem('marejar_user');
+
+                if (userData) {
+                    try {
+                        const user = JSON.parse(userData);
+                        const nomeCompleto = typeof user.name === 'string' ? user.name.trim() : '';
+                        const primeiraLetra = nomeCompleto ? nomeCompleto.charAt(0).toUpperCase() : 'U';
+                        const primeiroNome = nomeCompleto ? nomeCompleto.split(/\s+/)[0] : 'Usuário';
+
+                        userNavArea.innerHTML = `
+                            <div class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle d-flex align-items-center gap-2"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
+                                    <div style="width:36px;height:36px;border-radius:50%;background-color:#13357B;color:#fff;
+                                                display:flex;align-items:center;justify-content:center;font-weight:bold;
+                                                font-size:15px;border:2px solid #13357B;">
+                                        ${primeiraLetra}
+                                    </div>
+                                    <span class="fw-bold text-dark">${escapeHtml(primeiroNome)}</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end shadow border-0 m-0">
+                                    <li><a class="dropdown-item py-2" href="perfil.html"><i class="fa fa-user me-2 text-primary"></i>Meu Perfil</a></li>
+                                    <li><a class="dropdown-item py-2" href="Minha_jornada.html"><i class="fa fa-trophy me-2 text-warning"></i>Minha Jornada</a></li>
+                                    <li><hr class="dropdown-divider my-1"></li>
+                                    <li><button type="button" class="dropdown-item py-2 text-danger" onclick="fazerLogout()"><i class="fa fa-sign-out-alt me-2"></i>Sair</button></li>
+                                </ul>
+                            </div>
+                        `;
+                    } catch (e) {
+                        console.error('Erro ao ler dados do usuário:', e);
+                    }
+                }
+            }
+
+            function escapeHtml(valor) {
+                return valor.replace(/[&<>"']/g, caractere => ({
+                    '&': '&amp;', 
+                    '<': '&lt;', 
+                    '>': '&gt;',
+                    '"': '&quot;', 
+                    "'": '&#039;'
+                })[caractere]);
+            }
+
+            function fazerLogout() {
+                localStorage.removeItem('marejar_token');
+                localStorage.removeItem('marejar_user');
+                window.location.href = 'index.html';
+            }
+        </script>
+    </body>
+
+</html>

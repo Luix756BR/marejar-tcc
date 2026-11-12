@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <title>Marejar - Minha Jornada</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* Card de Resumo de XP */
+        .xp-summary-card {
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e2e8f0;
+            margin-top: -40px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Barra de Progresso Customizada */
+        .progress-custom {
+            height: 10px;
+            border-radius: 5px;
+            background-color: #e2e8f0;
+        }
+
+        /* Cards de Missões */
+        .mission-card {
+            background: #ffffff;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+        }
+
+        .mission-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(19, 53, 123, 0.08);
+            border-color: #cbd5e1;
+        }
+
+        .mission-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        /* Badges de Status das Missões */
+        .badge-status-completed {
+            background-color: #d1e7dd;
+            color: #0f5132;
+            border: 1px solid #badbcc;
+        }
+
+        .badge-status-pending {
+            background-color: #e2e8f0;
+            color: #334155;
+            border: 1px solid #cbd5e1;
+        }
+
+        /* Badges de Pontuação */
+        .badge-xp-completed {
+            background-color: #f0fdf4;
+            color: #15803d;
+            border: 1px solid #bbf7d0;
+        }
+
+        .badge-xp-pending {
+            background-color: #fefce8;
+            color: #854d0e;
+            border: 1px solid #fef08a;
+        }
+
+        /* Card da Loja de Recompensas */
+        .rewards-banner {
+            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+            border: 2px dashed #93c5fd;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Carregando...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar & Hero Start (Estrutura Original do Projeto) -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0 d-flex align-items-center">
+                <img src="img/Logo.png" alt="Logo Marejar" style="width: 70px; height: 100px; object-fit: contain; flex-shrink: 0;" class="me-2">
+                <h1 class="m-0">Marejar</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Início</a>
+                    <a href="index.html#sobre" class="nav-item nav-link">Sobre</a>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Serviços</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="IA - MIA.html" class="dropdown-item">Assistente de IA</a>
+                            <a href="pacotes.html" class="dropdown-item">Pacotes</a>
+                            
+                        </div>
+                    </div>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Regiões</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="Goiana-regioes.html" class="dropdown-item">Goiana</a>
+                            <a href="Igarassu-regioes.html" class="dropdown-item">Igarassu</a>
+                            <a href="Itamaraca-regioes.html" class="dropdown-item">Itamaracá</a>
+                            <a href="Itapissuma-regioes.html" class="dropdown-item">Itapissuma</a>
+                            <a href="Olinda-regioes.html" class="dropdown-item">Olinda</a>
+                            <a href="Paulista-regioes.html" class="dropdown-item">Paulista</a>
+                        </div>
+                    </div>
+
+                    <a href="contato.html" class="nav-item nav-link">Contato</a>
+                </div>
+
+                <!-- Botão de Acesso / Perfil do Usuário -->
+                <div id="user-nav-area" class="ms-lg-4 d-flex align-items-center">
+                    <a href="painel_acesso.html" class="btn btn-outline-primary rounded px-4 py-2 text-white border-white bg-primary bg-opacity-20">Entrar</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar & Hero End -->
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-breadcrumb" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/cidades/olinda/igreja-do-carmo.jpg'); background-position: center; background-size: cover;">
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <div class="d-inline-flex bg-white px-3 py-2 rounded-pill text-primary mb-4" style="font-weight: 600;">
+                <i class="fa fa-trophy me-2 mt-1 text-warning"></i> Gamificação & Conquistas
+            </div>
+            <h3 class="text-white display-3 mb-4">Minha Jornada</h3>
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="index.html">Início</a></li>
+                <li class="breadcrumb-item"><a href="#">Perfil</a></li>
+                <li class="breadcrumb-item active text-white">Minha Jornada</li>
+            </ol>    
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Conteúdo Principal da Gamificação -->
+    <main class="container py-5" style="background-color: #f8f9fa;">
+        
+        <!-- Card de Resumo de XP e Conquistas -->
+        <div class="xp-summary-card p-4 mb-4">
+            <div class="row align-items-center g-4">
+                <div class="col-md-6 border-end-md">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="fs-1 text-warning me-3">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div>
+                            <span class="text-muted small text-uppercase fw-bold d-block">Seus Pontos</span>
+                            <h2 class="text-primary fw-bold mb-0">450 XP</h2>
+                        </div>
+                    </div>
+                    <div class="progress progress-custom mb-2">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <small class="text-muted">Faltam 150 XP para o próximo nível!</small>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="fs-1 text-primary me-3">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold text-dark mb-0">3 de 8 concluídas</h4>
+                            <span class="text-muted small">Missões do seu roteiro atual</span>
+                        </div>
+                    </div>
+                    <div class="row text-center g-2 pt-2 border-top">
+                        <div class="col-4">
+                            <span class="text-success fw-bold d-block fs-5"><i class="fas fa-check-circle me-1"></i> 3</span>
+                            <small class="text-muted">Concluídas</small>
+                        </div>
+                        <div class="col-4 border-start border-end">
+                            <span class="text-secondary fw-bold d-block fs-5"><i class="fas fa-clock me-1"></i> 5</span>
+                            <small class="text-muted">Pendentes</small>
+                        </div>
+                        <div class="col-4">
+                            <span class="text-primary fw-bold d-block fs-5"><i class="fas fa-flag me-1"></i> 8</span>
+                            <small class="text-muted">Total</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Missões do Roteiro -->
+        <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <h3 class="fw-bold text-dark mb-0"><i class="fas fa-compass text-primary me-2"></i> Missões do seu roteiro</h3>
+            <div class="dropdown">
+                <button class="btn btn-outline-secondary btn-sm dropdown-toggle rounded-pill px-3" type="button" data-bs-toggle="dropdown">
+                    Roteiro: Olinda e Recife
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Olinda e Recife</a></li>
+                    <li><a class="dropdown-item" href="#">Litoral Norte (Paulista/Igarassu)</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Lista de Missões -->
+        <div class="row g-3 mb-5">
+            
+            <!-- Missão 1: Concluída -->
+            <div class="col-12">
+                <div class="mission-card p-3 d-flex align-items-center justify-content-between flex-wrap gap-3">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="img/cidades/olinda/igreja-do-carmo.jpg" class="mission-img shadow-sm" alt="Forte">
+                        <div>
+                            <h5 class="fw-bold mb-1 text-dark">Visite o Forte das Cinco Pontas</h5>
+                            <p class="text-muted small mb-2">Registre uma foto no local para comprovar sua visita.</p>
+                            <span class="badge badge-status-completed px-3 py-1 rounded-pill">
+                                <i class="fas fa-check me-1"></i> Concluída
+                            </span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 ms-auto">
+                        <span class="badge badge-xp-completed fw-bold px-3 py-2 rounded-pill shadow-sm">
+                            <i class="fas fa-star text-warning me-1"></i> +100 pontos
+                        </span>
+                        <i class="fas fa-chevron-right text-muted"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Missão 2: Pendente -->
+            <div class="col-12">
+                <div class="mission-card p-3 d-flex align-items-center justify-content-between flex-wrap gap-3">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="img/cidades/olinda/casa_bonecos.jfif" class="mission-img shadow-sm" alt="Centro Histórico">
+                        <div>
+                            <h5 class="fw-bold mb-1 text-dark">Explore o centro histórico</h5>
+                            <p class="text-muted small mb-2">Encontre um cenário interessante e registre sua experiência.</p>
+                            <span class="badge badge-status-pending px-3 py-1 rounded-pill">
+                                <i class="fas fa-camera me-1"></i> Pendente
+                            </span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 ms-auto">
+                        <span class="badge badge-xp-pending fw-bold px-3 py-2 rounded-pill shadow-sm">
+                            <i class="fas fa-star text-warning me-1"></i> +150 pontos
+                        </span>
+                        <i class="fas fa-chevron-right text-muted"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Missão 3: Pendente -->
+            <div class="col-12">
+                <div class="mission-card p-3 d-flex align-items-center justify-content-between flex-wrap gap-3">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="img/cidades/olinda/mosteiro-sao-bento-olinda-pe.webp" class="mission-img shadow-sm" alt="Gastronomia">
+                        <div>
+                            <h5 class="fw-bold mb-1 text-dark">Experimente um sabor regional</h5>
+                            <p class="text-muted small mb-2">Fotografe um prato típico em um estabelecimento parceiro.</p>
+                            <span class="badge badge-status-pending px-3 py-1 rounded-pill">
+                                <i class="fas fa-camera me-1"></i> Pendente
+                            </span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 ms-auto">
+                        <span class="badge badge-xp-pending fw-bold px-3 py-2 rounded-pill shadow-sm">
+                            <i class="fas fa-star text-warning me-1"></i> +200 pontos
+                        </span>
+                        <i class="fas fa-chevron-right text-muted"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Seção Loja de Recompensas -->
+        <div class="rewards-banner p-4 p-md-5 d-flex align-items-center justify-content-between flex-wrap gap-4 shadow-sm">
+            <div class="d-flex align-items-center gap-4">
+                <div class="fs-1 text-primary bg-white p-3 rounded-circle shadow-sm">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <div>
+                    <h4 class="fw-bold text-dark mb-1">Loja de recompensas</h4>
+                    <p class="text-muted mb-0">Troque seus pontos por descontos e benefícios exclusivos dos parceiros do Marejar.</p>
+                </div>
+            </div>
+            <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-3 px-4 shadow-sm fw-bold">
+                Ver recompensas <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer Start -->
+    <footer class="container-fluid footer py-5 bg-dark text-white border-top border-secondary">
+        <div class="container py-4">
+            <div class="row g-5 justify-content-between">
+                <div class="col-md-6 col-lg-4">
+                    <div class="footer-item d-flex flex-column">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="img/Logo.png" alt="Logo Marejar" style="width: 50px; height: 60px; object-fit: contain;" class="me-2">
+                            <h3 class="text-white m-0">Marejar</h3>
+                        </div>
+                        <p class="text-white-50 mb-4">Descubra. Explore. Viva o melhor do litoral norte de Pernambuco com roteiros inteligentes e personalizados.</p>
+                        <p class="text-white-50 mb-2"><i class="fas fa-graduation-cap me-2 text-primary"></i> TCC - Desenvolvimento de Sistemas</p>
+                        <p class="text-white-50 mb-4"><i class="fas fa-school me-2 text-primary"></i> ETE Jurandir Bezerra Lins</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4 text-white">Navegação</h4>
+                        <a href="index.html" class="text-white-50 mb-2 text-decoration-none"><i class="fas fa-angle-right me-2 text-primary"></i> Início</a>
+                        <a href="index.html#sobre" class="text-white-50 mb-2 text-decoration-none"><i class="fas fa-angle-right me-2 text-primary"></i> Sobre o Projeto</a>
+                        <a href="pacotes.html" class="text-white-50 mb-2 text-decoration-none"><i class="fas fa-angle-right me-2 text-primary"></i> Pacotes Turísticos</a>
+                        <a href="contato.html" class="text-white-50 mb-2 text-decoration-none"><i class="fas fa-angle-right me-2 text-primary"></i> Contato</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4 text-white">Regiões Atendidas</h4>
+                         <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Olinda</p>
+                        <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Paulista</p>
+                        <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Igarassu</p>
+                        <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Itapissuma</p>
+                        <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Itamaracá</p>
+                        <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Goiana</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+   
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Script para marcar 'Minha Jornada' como active no menu do Perfil -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            verificarSessaoUsuarioJornada();
+        });
+
+        function verificarSessaoUsuarioJornada() {
+            const userNavArea = document.getElementById('user-nav-area');
+            if (!userNavArea) return;
+
+            const userData = localStorage.getItem('marejar_user');
+
+            if (userData) {
+                try {
+                    const user = JSON.parse(userData);
+                    const nomeCompleto = typeof user.name === 'string' ? user.name.trim() : '';
+                    const primeiraLetra = nomeCompleto ? nomeCompleto.charAt(0).toUpperCase() : 'U';
+                    const primeiroNome = nomeCompleto ? nomeCompleto.split(/\s+/)[0] : 'Usuário';
+
+                    userNavArea.innerHTML = `
+                        <div class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle d-flex align-items-center gap-2"
+                               data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
+                                <div style="width:36px;height:36px;border-radius:50%;background-color:#13357B;color:#fff;
+                                            display:flex;align-items:center;justify-content:center;font-weight:bold;
+                                            font-size:15px;border:2px solid #13357B;">
+                                    ${primeiraLetra}
+                                </div>
+                                <span class="fw-bold">${escapeHtml(primeiroNome)}</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow border-0 m-0">
+                                <li><a class="dropdown-item py-2" href="perfil.html"><i class="fa fa-user me-2 text-primary"></i>Meu Perfil</a></li>
+                                <li><a class="dropdown-item py-2 active" href="jornada.html"><i class="fa fa-trophy me-2 text-warning"></i>Minha Jornada</a></li>
+                                <li><hr class="dropdown-divider my-1"></li>
+                                <li><button type="button" class="dropdown-item py-2 text-danger" onclick="fazerLogout()"><i class="fa fa-sign-out-alt me-2"></i>Sair</button></li>
+                            </ul>
+                        </div>
+                    `;
+                } catch (e) {
+                    console.error('Erro ao ler dados do usuário:', e);
+                }
+            }
+        }
+
+        function escapeHtml(valor) {
+            return valor.replace(/[&<>"']/g, caractere => ({
+                '&': '&amp;', '<': '&lt;', '>': '&gt;',
+                '"': '&quot;', "'": '&#039;'
+            })[caractere]);
+        }
+
+        function fazerLogout() {
+            localStorage.removeItem('marejar_token');
+            localStorage.removeItem('marejar_user');
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+
+</html>

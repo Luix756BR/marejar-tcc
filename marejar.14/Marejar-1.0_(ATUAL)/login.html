@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Usuário - Marejar</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="card">
+        <!-- Seta de voltar apontando para o primeiro acesso -->
+        <a href="painel_acesso.html" class="back-arrow"><i class="fa-solid fa-arrow-left"></i></a>
+        
+        <!-- Logo Azul -->
+        <div class="logo-area">
+            <div class="logo-custom">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <span>MAREJAR</span>
+            </div>
+        </div>
+
+        <h1>Login Usuário</h1>
+        <p class="subtitle">Bem-vindo novamente!</p>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="login-cpf">CPF</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-user input-icon"></i>
+                    <input type="text" id="login-cpf" placeholder="000.000.000-00" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="login-password">Senha</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock input-icon"></i>
+                    <input type="password" id="login-password" placeholder="........" required>
+                    <i class="fa-regular fa-eye password-toggle"></i>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-primary">Entrar</button>
+        </form>
+
+        <div class="footer-links">
+            <!-- Link corrigido para voltar ao primeiro acesso -->
+            <!--<a href="primeiro_acesso.html" class="forgot-link">Preencher primeiro acesso</a>-->
+            <p>Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+        </div>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html>

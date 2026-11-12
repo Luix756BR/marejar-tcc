@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": "u001",
+      "role": "usuario",
+      "name": "Maria Oliveira",
+      "cpf": "123.456.789-00",
+      "birthDate": "1995-05-20",
+      "email": "maria@marejar.com",
+      "phone": "(81) 99999-0001",
+      "password": "123456",
+      "city": "Recife - PE",
+      "createdAt": "2026-08-28T10:00:00.000Z"
+    },
+    {
+      "id": "g001",
+      "role": "guia",
+      "name": "João da Silva",
+      "cpf": "987.654.321-00",
+      "registration": "12.345678.10.0001-6",
+      "birthDate": "1990-05-12",
+      "email": "joao.silva@marejar.com",
+      "phone": "(81) 98888-0002",
+      "password": "123456",
+      "city": "Recife - PE",
+      "attributes": [
+        "Religioso",
+        "Lazer",
+        "Esporte"
+      ],
+      "createdAt": "2026-08-28T10:00:00.000Z"
+    },
+    {
+      "id": "u1793969551439",
+      "role": "usuario",
+      "name": "Luiz Guilherme",
+      "cpf": "12345678901",
+      "birthDate": "2008-08-02",
+      "email": "luizguilherme123br@gmail.com",
+      "phone": "8199999999",
+      "password": "$2b$10$xlpgk6HdXZWdORxWyPQM5OMef4vG.ffw0fsxXwcMRVEO91ym4OtnK",
+      "city": "Paulista",
+      "createdAt": "2026-11-06T12:52:31.439Z"
+    }
+  ]
+}

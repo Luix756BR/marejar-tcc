@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Usuário - Marejar</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="card card-cadastro">
+        <!-- Seta de voltar para o login -->
+        <a href="login.html" class="back-arrow"><i class="fa-solid fa-arrow-left"></i></a>
+        
+        <!-- Logo Azul -->
+        <div class="logo-area">
+            <div class="logo-custom">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <span>MAREJAR</span>
+            </div>
+        </div>
+
+        <h1>Cadastro Usuário</h1>
+        <p class="subtitle">Olá, crie sua conta!</p>
+
+        <form id="registerForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Nome completo</label>
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-user input-icon"></i>
+                        <input type="text" id="name" placeholder="Nome completo" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-user input-icon"></i>
+                        <input type="text" id="cpf" placeholder="000.000.000-00" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="role">Tipo de Conta</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-user-tag input-icon"></i>
+                        <select id="role" required style="width: 100%; border: none; background: transparent; outline: none; padding-left: 35px; font-size: 14px;">
+                            <option value="usuario">Turista / Visitante</option>
+                            <option value="guia">Guia de Turismo</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="city">Cidade / Estado</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-location-dot input-icon"></i>
+                        <input type="text" id="city" placeholder="Ex: Recife - PE" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campos condicionais para Guia (Cadastur e Atributos) -->
+            <div class="form-row" id="guiaFields" style="display: none;">
+                <div class="form-group">
+                    <label for="registration">Registro Cadastur</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-id-card input-icon"></i>
+                        <input type="text" id="registration" placeholder="00.000000.10.0001-6">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="attributesInput">Especialidades (separadas por vírgula)</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-star input-icon"></i>
+                        <input type="text" id="attributesInput" placeholder="Ex: Religioso, Lazer, Ecoturismo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="birthDate">Data de nascimento</label>
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-calendar input-icon"></i>
+                        <input type="date" id="birthDate" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-envelope input-icon"></i>
+                        <input type="email" id="email" placeholder="seu@email.com" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Celular</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-mobile-screen input-icon"></i>
+                        <input type="tel" id="phone" placeholder="(00) 00000-0000" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-lock input-icon"></i>
+                        <input type="password" id="password" placeholder="........" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="confirmPassword">Confirmar senha</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock input-icon"></i>
+                    <input type="password" id="confirmPassword" placeholder="........" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-primary">Cadastrar</button>
+        </form>
+
+        <div class="footer-links">
+            <p>Já tem uma conta? <a href="login.html">Entrar</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Mostra os campos extras de Guia caso selecione "guia" no select
+        document.getElementById('role').addEventListener('change', function() {
+            const guiaFields = document.getElementById('guiaFields');
+            if (this.value === 'guia') {
+                guiaFields.style.display = 'flex';
+            } else {
+                guiaFields.style.display = 'none';
+            }
+        });
+    </script>
+    <script src="js/cadastro.js"></script>
+</body>
+</html>

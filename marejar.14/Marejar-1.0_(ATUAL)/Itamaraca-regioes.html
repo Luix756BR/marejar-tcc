@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Marejar - Itamaracá</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <style>
+            .filter-pill-btn {
+                border-radius: 50rem !important;
+                border: 1px solid #13357B !important;
+                color: #13357B !important;
+                background-color: transparent !important;
+                padding: 10px 24px;
+                font-weight: 500;
+                transition: all 0.3s ease;
+            }
+
+            .filter-pill-btn:hover, 
+            .filter-pill-btn.active {
+                background-color: #13357B !important;
+                color: #ffffff !important;
+                box-shadow: 0 4px 12px rgba(19, 53, 123, 0.25);
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Carregando...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0 d-flex align-items-center">
+                    <img src="img/Logo.png" alt="Logo Marejar" style="width: 70px; height: 100px; object-fit: contain; flex-shrink: 0;" class="me-2">
+                    <h1 class="m-0">Marejar</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Início</a>
+                        <a href="index.html#sobre" class="nav-item nav-link">Sobre</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Serviços</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="IA - MIA.html" class="dropdown-item">Assistente de IA</a>
+                                <a href="pacotes.html" class="dropdown-item">Pacotes</a>
+                            </div>
+                        </div>
+
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Regiões</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="Goiana-regioes.html" class="dropdown-item">Goiana</a>
+                                <a href="Igarassu-regioes.html" class="dropdown-item">Igarassu</a>
+                                <a href="Itamaraca-regioes.html" class="dropdown-item active">Itamaracá</a>
+                                <a href="Itapissuma-regioes.html" class="dropdown-item">Itapissuma</a>
+                                <a href="Olinda-regioes.html" class="dropdown-item">Olinda</a>
+                                <a href="Paulista-regioes.html" class="dropdown-item">Paulista</a>
+                            </div>
+                        </div>
+                    
+                        <a href="contato.html" class="nav-item nav-link">Contato</a>
+                    </div>
+                        
+                    <!--Botão de Acesso do Usuário-->
+                    <div id="user-nav-area" class="ms-lg-4 d-flex align-items-center">
+                        <a href="painel_acesso.html" class="btn btn-outline-primary rounded px-4 py-2 text-white border-white bg-primary bg-opacity-20">Entrar</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/cidades/itamaraca/ilha-de-itamaraca-forte-orange-1068x712.webp'); background-position: center; background-size: cover;">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <div class="d-inline-flex bg-white px-3 py-2 rounded-pill text-primary mb-4" style="font-weight: 600;">
+                    <i class="fa fa-map-marker-alt me-2 mt-1"></i> Itamaracá - Pernambuco
+                </div>
+                <h3 class="text-white display-3 mb-4">Conheça Itamaracá</h3>
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- Packages Start -->
+        <div class="container-fluid py-5" style="background-color: #f8f9fa;">
+            <div class="container py-5">
+                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                    <h1 class="mb-0">Pacotes e Experiências em Itamaracá</h1>
+                    <p class="text-muted mt-2">Explore os tipos de turismo disponíveis na Ilha com roteiros interativos.</p>
+                </div>
+
+                <!-- Botões de Filtro -->
+                <div class="row justify-content-center mb-5">
+                    <div class="col-auto">
+                        <div class="d-flex flex-wrap justify-content-center gap-3" role="group" aria-label="Filtro de Tipos de Turismo">
+                            <button type="button" class="btn filter-pill-btn active" onclick="filterPackages('all', this)">Todos os Pacotes</button>
+                            <button type="button" class="btn filter-pill-btn" onclick="filterPackages('lazer', this)">Turismo de Lazer</button>
+                            <button type="button" class="btn filter-pill-btn" onclick="filterPackages('aventura', this)">Turismo de Experiência / Aventura</button>
+                            <button type="button" class="btn filter-pill-btn" onclick="filterPackages('religioso', this)">Turismo Religioso</button>
+                            <button type="button" class="btn filter-pill-btn" onclick="filterPackages('educacional', this)">Turismo Educacional</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 align-items-stretch" id="package-list">
+
+                    <!-- ================= LAZER (4 Pacotes) ================= -->
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="lazer">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="img/cidades/itamaraca/ilha-de-itamaraca-forte-orange-1068x712.webp" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Forte Orange e Praia">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Itamaracá</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 3 dias</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Praia do Forte Orange</h4>
+                                    <p class="mb-3 text-muted small">Dia de lazer à beira-mar com vista para o Forte Holandês e Coroa do Avião.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="lazer">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Enseada dos Golfinhos">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Itamaracá</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 2 dias</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Praia Enseada dos Golfinhos</h4>
+                                    <p class="mb-3 text-muted small">Águas mornas e tranquilas com estrutura de quiosques e eventual avistamento de golfinhos.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="lazer">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Praia do Sossego">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Itamaracá</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Praia do Sossego & Bancos de Areia</h4>
+                                    <p class="mb-3 text-muted small">Refúgio calmo cercado por coqueirais e formações marinhas ideias para banho de mar.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="lazer">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Vila Velha Mirante">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Itamaracá</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Mirante de Vila Velha</h4>
+                                    <p class="mb-3 text-muted small">Vista panorâmica privilegiada do litoral da Ilha e do Canal de Santa Cruz com restaurante local.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ================= AVENTURA / EXPERIÊNCIA (4 Pacotes) ================= -->
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="aventura">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Kitesurf Coroa do Aviao">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Itamaracá</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Kitesurf na Coroa do Avião</h4>
+                                    <p class="mb-3 text-muted small">Ventos constantes ideais para a prática de Kitesurf e travessia aquática de aventura.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="aventura">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Kayak Igarapes Itamaraca">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Itamaracá</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Kayak e SUP nos Igarapés</h4>
+                                    <p class="mb-3 text-muted small">Expedição remando pelos canais de manguezal interiores da Ilha de Itamaracá.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="aventura">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Buggy em Itamaraca">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Itamaracá</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Trilha Off-Road de Buggy</h4>
+                                    <p class="mb-3 text-muted small">Circuito de emoção de norte a sul da Ilha percorrendo trilhas, dunas e praias rústicas.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="aventura">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Mergulho Piscinas Naturais Itamaraca">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Itamaracá</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Mergulho nas Piscinas Naturais</h4>
+                                    <p class="mb-3 text-muted small">Snorkeling nos arrecifes da ilha descobrindo peixes tropicais na maré baixa.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ================= RELIGIOSO (4 Pacotes) ================= -->
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="religioso">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Igreja Vila Velha">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Itamaracá</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Igreja N. Sra. da Conceição</h4>
+                                    <p class="mb-3 text-muted small">Visita à historicíssima igreja quinhentista localizada no vilarejo secular de Vila Velha.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="religioso">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Capela de Sao Francisco">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Itamaracá</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Capela de São Francisco</h4>
+                                    <p class="mb-3 text-muted small">Capela centenária em ambiente bucólico com tradição nas festividades da comunidade.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="religioso">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Igreja N Sra do Amparo">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Itamaracá</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Igreja N. Sra. do Amparo</h4>
+                                    <p class="mb-3 text-muted small">Templo religioso de valor patrimonial cultural localizado na zona central da ilha.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="religioso">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Cruzeiro de Vila Velha">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Itamaracá</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Cruzeiro de Vila Velha</h4>
+                                    <p class="mb-3 text-muted small">Monumento de fé no ponto alto da ilha, ponto de peregrinação e vista panorâmica.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ================= EDUCACIONAL (4 Pacotes) ================= -->
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="educacional">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Centro Peixe Boi Marinho">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Itamaracá</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Projeto Peixe-Boi Marinho</h4>
+                                    <p class="mb-3 text-muted small">Visita pedagógica ao centro de reabilitação e conservação da espécie ameaçada.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="educacional">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Aula Forte Orange">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Itamaracá</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">História no Forte Orange</h4>
+                                    <p class="mb-3 text-muted small">Aula de campo abordando as invasões holandesas e a engenharia militar do século XVII.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="educacional">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Estudo Manguezal Itamaraca">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Itamaracá</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Estudo do Ecossistema Estuarino</h4>
+                                    <p class="mb-3 text-muted small">Atividade educativa focada na importância ecológica dos manguezais do Canal de Santa Cruz.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="educacional">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Ciranda Lia de Itamaraca">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Itamaracá</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Workshop de Cultura Popular & Ciranda</h4>
+                                    <p class="mb-3 text-muted small">Vivência cultural aprendendo a tradição imaterial da ciranda de Pernambuco.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Packages End -->
+
+        <!-- Footer Start -->
+        <footer class="container-fluid footer py-5 bg-dark text-white border-top border-secondary">
+            <div class="container py-4">
+                <div class="row g-5 justify-content-between">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-item d-flex flex-column">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="img/Logo.png" alt="Logo Marejar" style="width: 50px; height: 60px; object-fit: contain;" class="me-2">
+                                <h3 class="text-white m-0">Marejar</h3>
+                            </div>
+                            <p class="text-white-50 mb-4">Descubra. Explore. Viva o melhor do litoral norte de Pernambuco com roteiros inteligentes e personalizados.</p>
+                            <p class="text-white-50 mb-2"><i class="fas fa-graduation-cap me-2 text-primary"></i> TCC - Desenvolvimento de Sistemas</p>
+                            <p class="text-white-50 mb-4"><i class="fas fa-school me-2 text-primary"></i> ETE Jurandir Bezerra Lins</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Navegação</h4>
+                            <a href="index.html" class="text-white-50 mb-2 text-decoration-none"><i class="fas fa-angle-right me-2 text-primary"></i> Início</a>
+                            <a href="index.html#sobre" class="text-white-50 mb-2 text-decoration-none"><i class="fas fa-angle-right me-2 text-primary"></i> Sobre o Projeto</a>
+                            <a href="pacotes.html" class="text-white-50 mb-2 text-decoration-none"><i class="fas fa-angle-right me-2 text-primary"></i> Pacotes Turísticos</a>
+                            <a href="contato.html" class="text-white-50 mb-2 text-decoration-none"><i class="fas fa-angle-right me-2 text-primary"></i> Contato</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Regiões Atendidas</h4>
+                            <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Olinda</p>
+                            <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Paulista</p>
+                            <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Igarassu</p>
+                            <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Itapissuma</p>
+                            <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Itamaracá</p>
+                            <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Goiana</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer End -->
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+
+        <!-- Script de Filtro Funcional -->
+        <script>
+            function filterPackages(category, element) {
+                if (window.event) {
+                    window.event.preventDefault();
+                }
+
+                const buttons = document.querySelectorAll('.filter-pill-btn');
+                buttons.forEach(btn => btn.classList.remove('active'));
+                
+                if (element) {
+                    element.classList.add('active');
+                }
+
+                const cards = document.querySelectorAll('.package-card');
+                cards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (!cardCategory) return;
+
+                    if (category === 'all' || cardCategory.trim() === category.trim()) {
+                        card.style.setProperty('display', 'flex', 'important');
+                    } else {
+                        card.style.setProperty('display', 'none', 'important');
+                    }
+                });
+            }
+        </script>
+
+        <!--Script para verificar a sessão do usuário -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                verificarSessaoUsuario();
+            });
+
+            function verificarSessaoUsuario() {
+                const userNavArea = document.getElementById('user-nav-area');
+                if (!userNavArea) return;
+
+                const userData = localStorage.getItem('marejar_user');
+
+                if (userData) {
+                    try {
+                        const user = JSON.parse(userData);
+                        const nomeCompleto = typeof user.name === 'string' ? user.name.trim() : '';
+                        const primeiraLetra = nomeCompleto ? nomeCompleto.charAt(0).toUpperCase() : 'U';
+                        const primeiroNome = nomeCompleto ? nomeCompleto.split(/\s+/)[0] : 'Usuário';
+
+                        userNavArea.innerHTML = `
+                            <div class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle d-flex align-items-center gap-2"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
+                                    <div style="width:36px;height:36px;border-radius:50%;background-color:#13357B;color:#fff;
+                                                display:flex;align-items:center;justify-content:center;font-weight:bold;
+                                                font-size:15px;border:2px solid #13357B;">
+                                        ${primeiraLetra}
+                                    </div>
+                                    <span class="fw-bold">${primeiroNome}</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end shadow border-0 m-0">
+                                    <li><a class="dropdown-item py-2" href="perfil.html"><i class="fa fa-user me-2 text-primary"></i>Meu Perfil</a></li>
+                                    <li><a class="dropdown-item py-2" href="jornada.html"><i class="fa fa-trophy me-2 text-warning"></i>Minha Jornada</a></li>
+                                    <li><hr class="dropdown-divider my-1"></li>
+                                    <li><button type="button" class="dropdown-item py-2 text-danger" onclick="fazerLogout()"><i class="fa fa-sign-out-alt me-2"></i>Sair</button></li>
+                                </ul>
+                            </div>
+                        `;
+                    } catch (e) {
+                        console.error('Erro ao ler dados do usuário:', e);
+                    }
+                }
+            }
+
+            function fazerLogout() {
+                localStorage.removeItem('marejar_token');
+                localStorage.removeItem('marejar_user');
+                window.location.href = 'index.html';
+            }
+        </script>
+    </body>
+
+</html>

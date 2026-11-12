@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Marejar - Paulista</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <style>
+            .filter-pill-btn {
+                border-radius: 50rem !important;
+                border: 1px solid #13357B !important;
+                color: #13357B !important;
+                background-color: transparent !important;
+                padding: 10px 24px;
+                font-weight: 500;
+                transition: all 0.3s ease;
+            }
+
+            .filter-pill-btn:hover, 
+            .filter-pill-btn.active {
+                background-color: #13357B !important;
+                color: #ffffff !important;
+                box-shadow: 0 4px 12px rgba(19, 53, 123, 0.25);
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Carregando...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0 d-flex align-items-center">
+                    <img src="img/Logo.png" alt="Logo Marejar" style="width: 70px; height: 100px; object-fit: contain; flex-shrink: 0;" class="me-2">
+                    <h1 class="m-0">Marejar</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Início</a>
+                        <a href="index.html#sobre" class="nav-item nav-link">Sobre</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Serviços</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="IA - MIA.html" class="dropdown-item">Assistente de IA</a>
+                                <a href="pacotes.html" class="dropdown-item">Pacotes</a>
+                            </div>
+                        </div>
+
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Regiões</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="Goiana-regioes.html" class="dropdown-item">Goiana</a>
+                                <a href="Igarassu-regioes.html" class="dropdown-item">Igarassu</a>
+                                <a href="Itamaraca-regioes.html" class="dropdown-item">Itamaracá</a>
+                                <a href="Itapissuma-regioes.html" class="dropdown-item">Itapissuma</a>
+                                <a href="Olinda-regioes.html" class="dropdown-item">Olinda</a>
+                                <a href="Paulista-regioes.html" class="dropdown-item active">Paulista</a>
+                            </div>
+                        </div>
+                    
+                        <a href="contato.html" class="nav-item nav-link">Contato</a>
+                    </div>
+                        
+                    <!--Botão de Acesso do Usuário-->
+                    <div id="user-nav-area" class="ms-lg-4 d-flex align-items-center">
+                        <a href="painel_acesso.html" class="btn btn-outline-primary rounded px-4 py-2 text-white border-white bg-primary bg-opacity-20">Entrar</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/cidades/paulista/rio-timbo-paulista-pe.webp'); background-position: center; background-size: cover;">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <div class="d-inline-flex bg-white px-3 py-2 rounded-pill text-primary mb-4" style="font-weight: 600;">
+                    <i class="fa fa-map-marker-alt me-2 mt-1"></i> Paulista - Pernambuco
+                </div>
+                <h3 class="text-white display-3 mb-4">Conheça Paulista</h3>
+                
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- Packages Start -->
+        <div class="container-fluid py-5" style="background-color: #f8f9fa;">
+            <div class="container py-5">
+                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                    <div class="d-inline-flex align-items-center justify-content-center mb-2">
+                        <span class="border-top border-primary border-2 w-25"></span>
+                        <span class="border-top border-primary border-2 w-25"></span>
+                    </div>
+                    <h1 class="mb-0">Pacotes e Experiências em Paulista</h1>
+                    <p class="text-muted mt-2">Explore praias encantadoras, passeios náuticos no Timbó e patrimônios históricos em Paulista.</p>
+                </div>
+
+                <!-- Botões de Filtro -->
+                <div class="row justify-content-center mb-5">
+                    <div class="col-auto">
+                        <div class="d-flex flex-wrap justify-content-center gap-3" role="group" aria-label="Filtro de Tipos de Turismo">
+                            <button type="button" class="btn filter-pill-btn active" onclick="filterPackages('all', this)">Todos os Pacotes</button>
+                            <button type="button" class="btn filter-pill-btn" onclick="filterPackages('lazer', this)">Turismo de Lazer</button>
+                            <button type="button" class="btn filter-pill-btn" onclick="filterPackages('aventura', this)">Turismo de Experiência / Aventura</button>
+                            <button type="button" class="btn filter-pill-btn" onclick="filterPackages('religioso', this)">Turismo Religioso</button>
+                            <button type="button" class="btn filter-pill-btn" onclick="filterPackages('educacional', this)">Turismo Educacional</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 align-items-stretch" id="package-list">
+
+                    <!-- ================= LAZER (4 Pacotes) ================= -->
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="lazer">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="img/cidades/paulista/maria farinha resort.jpg" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Maria Farinha Resort">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Paulista</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 3 dias</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Maria Farinha Resort</h4>
+                                    <p class="mb-3 text-muted small">Estrutura completa de lazer à beira-mar com piscinas, parques aquáticos e gastronomia.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="lazer">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="img/cidades/paulista/encantos do timbó.jfif" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Encantos do Timbó">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Paulista</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 2 dias</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Encantos do Timbó</h4>
+                                    <p class="mb-3 text-muted small">Contemplação relaxante do encontro do rio com o mar e passeio estuarino de lazer.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="lazer">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Praia do Janga">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Paulista</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Praia do Janga & Orla</h4>
+                                    <p class="mb-3 text-muted small">Orla revitalizada ideal para caminhadas, banho de mar e gastronomia nos quiosques.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="lazer">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Pau Amarelo Piscinas">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Paulista</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Piscinas Naturais de Pau Amarelo</h4>
+                                    <p class="mb-3 text-muted small">Formações de arrecifes que formam piscinas mornas ideais para momentos em família.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ================= AVENTURA / EXPERIÊNCIA (4 Pacotes) ================= -->
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="aventura">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="img/cidades/paulista/aventura no rio timbó.webp" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Aventura no Rio Timbó">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Paulista</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Aventura no Rio Timbó</h4>
+                                    <p class="mb-3 text-muted small">P passeio náutico dinâmico navegando pelo curso do rio com paradas náuticas radicais.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="aventura">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Buggy Maria Farinha">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Paulista</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Trilha de Buggy em Maria Farinha</h4>
+                                    <p class="mb-3 text-muted small">Emoção pura em circuito de buggy cruzando trechos de praia, dunas e coqueirais.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="aventura">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Caiaque Estuário Timbó">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Paulista</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Caiaque e SUP no Estuário</h4>
+                                    <p class="mb-3 text-muted small">Remada guiada explorando os canais tranquilos e os túneis do manguezal do Timbó.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="aventura">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Mergulho Farol Pau Amarelo">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Paulista</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Mergulho no Farol de Pau Amarelo</h4>
+                                    <p class="mb-3 text-muted small">Mergulho com snorkel contemplando peixes ornamentais na barreira de corais.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ================= RELIGIOSO (4 Pacotes) ================= -->
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="religioso">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Igreja N Sra do O">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Paulista</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Igreja de Nossa Senhora do Ó</h4>
+                                    <p class="mb-3 text-muted small">Construção histórica quinhentista tombada como patrimônio de grande valor religioso.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="religioso">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Igreja Santa Isabel">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Paulista</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Igreja Matriz de Santa Isabel</h4>
+                                    <p class="mb-3 text-muted small">Centro religioso no coração da cidade com tradição em festividades da comunidade.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="religioso">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Capela Sao Sebastiao">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Paulista</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Capela de São Sebastião</h4>
+                                    <p class="mb-3 text-muted small">Capela comunitária histórica localizada na praia de Pau Amarelo.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="religioso">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Capela Conceição Maria Farinha">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Paulista</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Capela N. Sra. da Conceição</h4>
+                                    <p class="mb-3 text-muted small">Templo bucólico próximo à barra do Rio Timbó com missas e momentos de oração.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ================= EDUCACIONAL (4 Pacotes) ================= -->
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="educacional">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Forte Pau Amarelo">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Paulista</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Forte de Pau Amarelo</h4>
+                                    <p class="mb-3 text-muted small">Aula de campo histórica estudando a fortificação militar construída no século XVIII.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="educacional">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Ecoparque Biodiversidade">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Paulista</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Aula de Campo: Ecoparque</h4>
+                                    <p class="mb-3 text-muted small">Estudo ecológico guiado abordando a preservação da mata nativa e a fauna da região.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="educacional">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Projeto Floresta de Mangue Timbó">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Paulista</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Projeto Floresta de Mangue</h4>
+                                    <p class="mb-3 text-muted small">Vivência ambiental sobre reflorestamento e conservação dos estuários fluviais.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex package-card" data-category="educacional">
+                        <div class="package-item bg-white rounded shadow-sm border overflow-hidden w-100 d-flex flex-column">
+                            <div class="package-img position-relative overflow-hidden" style="height: 220px;">
+                                <img src="" class="img-fluid w-100 h-100 bg-secondary" style="object-fit: cover;" alt="Engenhos de Paulista">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-2 text-muted small">
+                                        <span><i class="fa fa-map-marker-alt text-primary me-1"></i> Paulista</span>
+                                        <span><i class="fa fa-calendar-alt text-primary me-1"></i> 1 dia</span>
+                                        <span><i class="fa fa-user text-primary me-1"></i> 2 pessoas</span>
+                                    </div>
+                                    <h4 class="mb-3">Workshop de História dos Engenhos</h4>
+                                    <p class="mb-3 text-muted small">Roteiro educacional repassando o ciclo do açúcar e a fundação do município de Paulista.</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3">
+                                    <div><span class="text-muted small d-block">A partir de</span><h5 class="text-primary mb-0 font-weight-bold">R$ 000,00</h5></div>
+                                    <a href="IA - MIA.html" class="btn btn-primary rounded-pill py-2 px-4">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Packages End -->
+
+        <!-- Footer Start -->
+        <footer class="container-fluid footer py-5 bg-dark text-white border-top border-secondary">
+            <div class="container py-4">
+                <div class="row g-5 justify-content-between">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-item d-flex flex-column">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="img/Logo.png" alt="Logo Marejar" style="width: 50px; height: 60px; object-fit: contain;" class="me-2">
+                                <h3 class="text-white m-0">Marejar</h3>
+                            </div>
+                            <p class="text-white-50 mb-4">Descubra. Explore. Viva o melhor do litoral norte de Pernambuco com roteiros inteligentes e personalizados.</p>
+                            <p class="text-white-50 mb-2"><i class="fas fa-graduation-cap me-2 text-primary"></i> TCC - Desenvolvimento de Sistemas</p>
+                            <p class="text-white-50 mb-4"><i class="fas fa-school me-2 text-primary"></i> ETE Jurandir Bezerra Lins</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Navegação</h4>
+                            <a href="index.html" class="text-white-50 mb-2 text-decoration-none"><i class="fas fa-angle-right me-2 text-primary"></i> Início</a>
+                            <a href="index.html#sobre" class="text-white-50 mb-2 text-decoration-none"><i class="fas fa-angle-right me-2 text-primary"></i> Sobre o Projeto</a>
+                            <a href="pacotes.html" class="text-white-50 mb-2 text-decoration-none"><i class="fas fa-angle-right me-2 text-primary"></i> Pacotes Turísticos</a>
+                            <a href="contato.html" class="text-white-50 mb-2 text-decoration-none"><i class="fas fa-angle-right me-2 text-primary"></i> Contato</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Regiões Atendidas</h4>
+                            <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Olinda</p>
+                            <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Paulista</p>
+                            <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Igarassu</p>
+                            <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Itapissuma</p>
+                            <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Itamaracá</p>
+                            <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Goiana</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer End -->
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+
+        <!-- Script de Filtro Funcional -->
+        <script>
+            function filterPackages(category, element) {
+                if (window.event) {
+                    window.event.preventDefault();
+                }
+
+                const buttons = document.querySelectorAll('.filter-pill-btn');
+                buttons.forEach(btn => btn.classList.remove('active'));
+                
+                if (element) {
+                    element.classList.add('active');
+                }
+
+                const cards = document.querySelectorAll('.package-card');
+                cards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (!cardCategory) return;
+
+                    if (category === 'all' || cardCategory.trim() === category.trim()) {
+                        card.style.setProperty('display', 'flex', 'important');
+                    } else {
+                        card.style.setProperty('display', 'none', 'important');
+                    }
+                });
+            }
+        </script>
+        
+     <!--Script para verificar a sessão do usuário -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            verificarSessaoUsuario();
+        });
+
+        function verificarSessaoUsuario() {
+            const userNavArea = document.getElementById('user-nav-area');
+            if (!userNavArea) return;
+
+            const userData = localStorage.getItem('marejar_user');
+
+            if (userData) {
+                try {
+                    const user = JSON.parse(userData);
+                    const nomeCompleto = typeof user.name === 'string' ? user.name.trim() : '';
+                    const primeiraLetra = nomeCompleto ? nomeCompleto.charAt(0).toUpperCase() : 'U';
+                    const primeiroNome = nomeCompleto ? nomeCompleto.split(/\s+/)[0] : 'Usuário';
+
+                    userNavArea.innerHTML = `
+                        <div class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle d-flex align-items-center gap-2"
+                            data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
+                                <div style="width:36px;height:36px;border-radius:50%;background-color:#13357B;color:#fff;
+                                            display:flex;align-items:center;justify-content:center;font-weight:bold;
+                                            font-size:15px;border:2px solid #13357B;">
+                                    ${primeiraLetra}
+                                </div>
+                                <span class="fw-bold">${primeiroNome}</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow border-0 m-0">
+                                <li><a class="dropdown-item py-2" href="perfil.html"><i class="fa fa-user me-2 text-primary"></i>Meu Perfil</a></li>
+                                <li><a class="dropdown-item py-2" href="jornada.html"><i class="fa fa-trophy me-2 text-warning"></i>Minha Jornada</a></li>
+                                <li><hr class="dropdown-divider my-1"></li>
+                                <li><button type="button" class="dropdown-item py-2 text-danger" onclick="fazerLogout()"><i class="fa fa-sign-out-alt me-2"></i>Sair</button></li>
+                            </ul>
+                        </div>
+                    `;
+                } catch (e) {
+                    console.error('Erro ao ler dados do usuário:', e);
+                }
+            }
+        }
+
+        function fazerLogout() {
+            localStorage.removeItem('marejar_token');
+            localStorage.removeItem('marejar_user');
+            window.location.href = 'index.html';
+        }
+    </script>
+    </body>
+
+</html>
